@@ -7,12 +7,12 @@ import {
   updateMovie,
 } from '../controllers/movie.controller.js';
 
-const movieRouter = Router();
+const moviesRouter = Router();
 
-movieRouter.post('/', createMovie);
-movieRouter.get('/', getMovies);
-movieRouter.get('/:id', getMovie);
-movieRouter.delete('/:id', deleteMovie);
-movieRouter.patch('/:id', updateMovie);
+moviesRouter.post('/', createMovie);
+moviesRouter.get('/', getMovies);
+moviesRouter.get('/:id', getMovie);
+moviesRouter.delete('/:id', deleteMovie);
+moviesRouter.patch('/:id', updateMovie);
 
-export default movieRouter;
+export default moviesRouter;
