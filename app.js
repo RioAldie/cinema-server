@@ -5,6 +5,7 @@ import errorMiddleware from './middlewares/error.middleware.js';
 import moviesRouter from './routes/movie.route.js';
 import cinemasRoute from './routes/cinema.route.js';
 import screenRouter from './routes/screen.route.js';
+import showtimeRouter from './routes/showtime.route.js';
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/movies', moviesRouter);
 app.use('/api/v1/cinemas', cinemasRoute);
 app.use('/api/v1/screens', screenRouter);
+app.use('/api/v1/showtimes', showtimeRouter);
 
 app.use(errorMiddleware);
 

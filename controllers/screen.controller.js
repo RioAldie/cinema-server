@@ -44,6 +44,11 @@ export const getScreen = async (req, res, next) => {
       where: {
         id,
       },
+      include: {
+        showtimes: {
+          include: { movie: true },
+        },
+      },
     });
 
     if (!existingScreen) {
@@ -56,7 +61,7 @@ export const getScreen = async (req, res, next) => {
     res.status(200).json({
       success: true,
       message: 'Get Screen successfully',
-      data: { existingScreen },
+      data: { screen: existingScreen },
     });
   } catch (error) {
     next(error);
