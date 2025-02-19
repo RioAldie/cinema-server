@@ -89,3 +89,11 @@ export const signIn = async (req, res, next) => {
     next(error);
   }
 };
+
+const logout = async (req, res) => {
+  const userId = req.user.id;
+
+  await jwt.de;
+
+  res.json({ message: 'Logged out successfully' });
+};

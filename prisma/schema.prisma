@@ -29,7 +29,7 @@ model Movie {
   title       String
   description String
   duration    Int      
-  releaseDate DateTime
+  releaseDate String
   posterUrl   String?
   showtimes   Showtime[]
   createdAt   DateTime @default(now())

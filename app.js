@@ -2,6 +2,7 @@ import express from 'express';
 import authRouter from './routes/auth.route.js';
 import cookieParser from 'cookie-parser';
 import errorMiddleware from './middlewares/error.middleware.js';
+import movieRouter from './routes/movie.route.js';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/movies', movieRouter);
 
 app.use(errorMiddleware);
 
